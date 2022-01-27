@@ -1,0 +1,193 @@
+@import './variables.scss';
+
+header {
+    background-image: url('../../public/images/main-image.jpeg');
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+}
+
+.header {
+    color: white;
+    width: 60%;
+    margin-left: 30px;
+    padding-top: 100px;
+    font-family: $font-dongle;
+    animation: slidein 3s forwards;
+    opacity: 0;
+
+    h1 {
+        margin: 0;
+        font-size: 65px;
+        white-space: nowrap;
+    }
+
+    h3 {
+        font-size: 50px;
+        line-height: 40px;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    button {
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 2px solid #e74c3c;
+        border-radius: 0.6em;
+        font-size: 1rem;
+        line-height: 1;
+        margin: 20px;
+        padding: 1.2em 2.8em;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        border-color: #3498db;
+        color: #fff;
+        box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+        -webkit-transition: all 150ms ease-in-out;
+        transition: all 150ms ease-in-out;
+        white-space: nowrap;
+
+        &:hover {
+            box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: all 200ms;
+        }
+
+        &:active {
+            box-shadow: 0 0 15px 0 #145580 inset, 0 0 15px 4px #145580;
+        }
+    }
+}
+
+@keyframes slidein {
+    to {
+        opacity: 100%;
+        padding-top: 50px;
+    }
+}
+
+.start {
+    font-family: $font-dongle;
+
+    h2 {
+        margin: 0;
+        font-size: 75px;
+        text-align: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+
+        input {
+            border: lightgray solid 1px;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        button {
+            background: rgb(41, 41, 41);
+            color: $white;
+            font-family: $font-dongle;
+            border: none;
+            border-radius: 5px;
+            font-size: 25px;
+            margin-top: 50px;
+            padding: 5px 30px;
+        }
+
+        button:hover {
+            background: $black;
+            cursor: pointer;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.container {
+    font-family: $font-dongle;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 75px;
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
+        margin-bottom: 150px;
+
+        .text {
+            width: 48%;
+
+            h3 {
+                white-space: nowrap;
+                font-size: 50px;
+                margin: 0;
+            }
+
+            p {
+                font-size: 50px;
+                line-height: 35px;
+            }
+        }
+
+        .image1 {
+            background-image: url('../../public/images/share.jpeg');
+            background-size: cover;
+            border-radius: 10px;
+            width: 48%;
+            height: 300px;
+        }
+
+        .image2 {
+            background-image: url('../../public/images/support.jpeg');
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            width: 48%;
+            height: 300px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .text {
+        text-align: center;
+        margin: auto;
+        min-width: 400px;
+    }
+
+    .image1, .image2 {
+        margin: auto;
+        min-width: 400px;
+    }
+}
+
+@media (min-width: 800px) {
+    .header h1 {
+        font-size: 90px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header {
+        margin-left: 200px;
+    }
+}
